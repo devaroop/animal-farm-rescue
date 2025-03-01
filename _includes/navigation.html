@@ -9,7 +9,7 @@
       <ul class="navbar-nav mx-auto">
 	{% for item in site.data.navigation %}
 	<li class="nav-item px-lg-4">
-	  <a class="nav-link text-uppercase" href="{{ root_url }}{{ item.link }}">{{ item.name }}</a>
+	  <a class="nav-link text-uppercase" href="{{ site.baseurl }}{{ item.link }}">{{ item.name }}</a>
 	</li>
 	{% endfor %}
       </ul>
