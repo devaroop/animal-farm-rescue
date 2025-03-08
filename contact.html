@@ -1,0 +1,49 @@
+---
+layout: default
+title: Contact Us
+permalink: /contact
+---
+
+<section class="page-section cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-9 mx-auto">
+        <div class="cta-inner bg-faded text-center rounded">
+          <h2 class="section-heading mb-5">
+            <span class="section-heading-upper">Come On In</span>
+            <span class="section-heading-lower">We're Open</span>
+          </h2>
+          <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+	    {% for item in site.data.contact %}
+            <li class="list-unstyled-item list-hours-item d-flex">
+              {{ item.day }}
+              <span class="ms-auto">{{ item.hours }}</span>
+            </li>
+	    {% endfor %}
+          </ul>
+          <p class="address mb-5">
+	    <a href="{{ site.data.address.google_maps_link }}" target="_blank">
+            <em>
+              <strong>Animal Farm Rescue Center</strong>
+              <br />
+              {{ site.data.address.address }}
+            </em>
+	    </a>
+          </p>
+          <p class="mb-0">
+            <small><em>Call Anytime</em></small>
+            <br />
+            {{ site.data.address.phone_number }}
+          </p>
+
+	  <p class="mb-0">
+            <small><em>Email Anytime</em></small>
+            <br />
+            {{ site.data.address.email }}
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

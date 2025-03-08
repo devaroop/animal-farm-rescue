@@ -1,0 +1,49 @@
+---
+layout: default
+title: Volunteer
+permalink: /volunteer
+---
+
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0 w-100 about_image" src="assets/images/about.jpeg" alt="..." />
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">It's not always about money</span>
+              <span class="section-heading-lower">Volunteer Your Time and Skills</span>
+	    </h2>
+	    <ul class="list-unstyled text-start">
+	      {% for item in site.data.volunteer %}
+	      <li class="mb-2">
+		<i class="fas fa-paw pe-3"></i><span class="fw-bold">{{ item.title }}:</span> {{ item.description }}
+	      </li>
+	      {% endfor %}
+ 	    </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="row mt-3">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">Our needs</span>
+              <span class="section-heading-lower">Challenges</span>
+	    </h2>
+	    <ul class="list-unstyled text-start">
+	      {% for item in site.data.challenges %}
+	      <li class="mb-2">
+		<i class="fas fa-paw pe-3"></i>{{ item.title }}
+	      </li>
+	      {% endfor %}
+ 	    </ul>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
