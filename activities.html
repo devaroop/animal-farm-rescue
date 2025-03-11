@@ -62,3 +62,27 @@ permalink: /activities
   </div>
 </section>
 
+<section class="page-section about-heading">
+  <div class="container">
+    <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0 w-100 about_image" src="assets/images/training.jpeg" alt="..." />
+    <div class="about-heading-content">
+      <div class="row">
+        <div class="col-xl-9 col-lg-10 mx-auto">
+          <div class="bg-faded rounded p-5">
+            <h2 class="section-heading mb-4">
+              <span class="section-heading-upper">In addition</span>
+              <span class="section-heading-lower">Our Other Activities</span>
+	    </h2>
+	    <ul class="list-unstyled text-start">
+	      {% for item in site.data.activities %}
+	      <li class="mb-2">
+		<i class="fas fa-paw pe-3"></i>{{ item.name }}
+	      </li>
+	      {% endfor %}
+ 	    </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
