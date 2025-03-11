@@ -2,3 +2,11 @@
   link: 
 - name: About
   link: about
+- name: Activities
+  link: activities
+- name: Volunteer
+  link: volunteer
+- name: Donate
+  link: donate
+- name: Contact
+  link: contact
