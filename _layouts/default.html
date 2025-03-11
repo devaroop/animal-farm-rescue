@@ -30,7 +30,7 @@
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Animal Farm Rescue Center" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
-  <body style='background-image: linear-gradient(rgba(47, 23, 15, 0.4), rgba(47, 23, 15, 0.4)), url("assets/images/bg.jpg");'>
+  <body>
     {% include navigation.html %}
 
     <header>
@@ -51,7 +51,11 @@
 	      <img src="assets/images/logo.jpeg" width="70" height="70" alt="" loading="lazy">
             </div>
 
-            <p class="text-center">Animal Farm Rescue Center</p>
+            <p class="text-center">
+	      <span class="fw-bold">Animal Farm Rescue Center</span>
+	      <br/>
+	      Reg No: {{ site.data.address.registration_number }}
+	    </p>
 
             <ul class="list-unstyled d-flex flex-row justify-content-center">
 	      <li>
@@ -60,7 +64,7 @@
 		</a>
 	      </li>
 	      <li>
-		<a class="text-white px-2" href="https://www.instagram.com/animalfarmpune/" target="_blank">
+		<a class="text-white px-2" href="{{ site.data.social.instagram }}" target="_blank">
                   <i class="fab fa-instagram"></i>
 		</a>
 	      </li>
@@ -75,36 +79,18 @@
 
 	  
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Animals</h5>
+            <h5 class="text-uppercase mb-4">Social</h5>
 
             <ul class="list-unstyled">
 	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>When your pet is missing</a>
-	      </li>
-	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Recently found</a>
-	      </li>
-	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>How to adopt?</a>
-	      </li>
-	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Pets for adoption</a>
-	      </li>
-	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Material gifts</a>
-	      </li>
-	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Help with walks</a>
-	      </li>
-	      <li class="mb-2">
-		<a href="#!" class="text-white"><i class="fas fa-paw pe-3"></i>Volunteer activities</a>
+		<a href="{{ site.data.social.instagram }}" target="_blank" class="text-white"><i class="fab fa-instagram pe-3"></i>Instagram</a>
 	      </li>
             </ul>
           </div>
 
 	  
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
-            <h5 class="text-uppercase mb-4">Useful Links</h5>
+            <h5 class="text-uppercase mb-4">More</h5>
 
             <ul class="list-unstyled">
 	      {% for item in site.data.navigation %}
@@ -127,6 +113,9 @@
 		<p><i class="fas fa-phone pe-2"></i>{{ site.data.address.phone_number }}</p>
 	      </li>
 	      <li>
+		<p><i class="fas fa-phone pe-2"></i>{{ site.data.address.phone_number_2 }}</p>
+	      </li>
+	      <li>
 		<p><i class="fas fa-envelope pe-2 mb-0"></i>{{ site.data.address.email }} </p>
 	      </li>
             </ul>
@@ -137,7 +126,7 @@
       <!-- Copyright -->
       <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2)">
 	© 2025 Copyright:
-	<a class="text-white" href="#">Animal Farm Rescue Center</a>
+	<a class="text-white" href="{{ site.baseurl }}">Animal Farm Rescue Center</a>
       </div>
       <!-- Copyright -->
     </footer>

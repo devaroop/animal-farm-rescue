@@ -10994,6 +10994,7 @@ p {
     position: relative;
     z-index: 0;
     max-width: 60vw;
+    height: 600px;
   }
   .product-item .product-item-description {
     position: relative;
@@ -11028,5 +11029,9 @@ p {
 }
 
 img.about_image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
     height: 700px;
 }
+
