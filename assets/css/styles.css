@@ -10996,6 +10996,14 @@ p {
   position: relative;
 }
 @media (min-width: 992px) {
+
+  img.about_image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: auto;
+  }
+
   .intro .intro-img {
     width: 75%;
     float: right;
@@ -11063,12 +11071,6 @@ p {
   font-size: 1.2rem;
 }
 
-img.about_image {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    height: auto;
-}
 .footer{
   background-color:  #30acc1;
   color: white;
@@ -11093,4 +11095,9 @@ img.about_image {
   width:70%;
   height:auto;
   border-radius: 50% !important;
+}
+
+div.logo img {
+    width: 150px;
+    height: 50px;
 }
