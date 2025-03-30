@@ -29,10 +29,11 @@
     <link href="assets/css/styles.css" rel="stylesheet" />
     <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Animal Farm Rescue Center" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-  </head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
   <body>
     {% include navigation.html %}
 
@@ -46,7 +47,7 @@
 	<div class="row my-4">
           <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
             <div class="rounded-circle bg-white shadow-1-strong d-flex align-items-center justify-content-center mb-4 mx-auto">
-	      <img src="assets/images/logo.jpeg" loading="lazy">
+	      <img src="assets/images/logo_sm.jpeg" loading="lazy">
             </div>
 
             <p class="text-center">
@@ -55,9 +56,9 @@
 	      Reg No: {{ site.data.address.registration_number }}
 	    </p>
 
-            <ul class="list-unstyled d-flex flex-row justify-content-center">
+            <ul class="list-unstyled d-flex flex-row justify-content-center icons">
 	      <li>
-		<a class="text-white px-2" href="#!" target="_blank">
+		<a class="text-white px-2" href="{{site.data.social.facebook}}" target="_blank">
                   <i class="fab fa-facebook-square"></i>
 		</a>
 	      </li>
@@ -67,8 +68,8 @@
 		</a>
 	      </li>
 	      <li>
-		<a class="text-white ps-2" href="#!" target="_blank">
-                  <i class="fab fa-youtube"></i>
+		<a class="text-white px-2" href="{{ site.data.social.linkedin }}" target="_blank">
+                  <i class="fab fa-linkedin"></i>
 		</a>
 	      </li>
             </ul>
@@ -82,6 +83,12 @@
             <ul class="list-unstyled">
 	      <li class="mb-2">
 		<a href="{{ site.data.social.instagram }}" target="_blank" class="text-white"><i class="fab fa-instagram pe-3"></i>Instagram</a>
+	      </li>
+	      <li class="mb-2">
+		<a href="{{ site.data.social.facebook }}" target="_blank" class="text-white"><i class="fab fa-facebook pe-3"></i>Facebook</a>
+	      </li>
+	      <li class="mb-2">
+		<a href="{{ site.data.social.linkedin }}" target="_blank" class="text-white"><i class="fab fa-linkedin pe-3"></i>LinkedIn</a>
 	      </li>
             </ul>
           </div>
