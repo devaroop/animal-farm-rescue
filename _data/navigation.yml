@@ -8,5 +8,8 @@
   link: volunteer
 - name: Donate
   link: donate
+  highlight: true
+#- name: Adopt
+#  link: adopt
 - name: Contact
   link: contact
