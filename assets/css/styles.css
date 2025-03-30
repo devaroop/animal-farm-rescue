@@ -3768,7 +3768,6 @@ textarea.form-control-lg {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -9705,7 +9704,9 @@ textarea.form-control-lg {
 
   .py-lg-4nav {
     padding-top: 0.5rem !important;
-    padding-bottom: 1.5rem !important;
+    padding-bottom: 0.5rem !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
   .py-lg-5 {
     padding-top: 3rem !important;
@@ -10873,17 +10874,19 @@ p {
 }
 .site-heading .site-heading-secondary {  
   display: block;
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
+  font-weight: 500;
   font-family: inherit;
   color:#a6a6a6;
 }
 .site-heading .site-heading-primary {
+  font-family: "Roboto Condensed", sans-serif;
   text-transform: uppercase;
   color: var(--nav-bg-color);
   font-size: 3rem;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 4rem;
+  letter-spacing:-1px;
 }
 
 .page-section {
@@ -10925,6 +10928,10 @@ p {
   font-weight: 700;
   display:flex;
   flex-direction:column;
+  border-bottom: var(--nav-bg-color);
+  border-bottom-width:5px;
+  border-bottom-style: outset;
+  padding:0px;
   
 }
 #mainNav .logo{
@@ -10932,6 +10939,7 @@ p {
 }
 #mainNav .logo img{
   width: -webkit-fill-available; 
+  height:auto;
 }
 #mainNav a{
   color: white;
@@ -11026,6 +11034,15 @@ p {
     width: 45%;
   }
 }
+.product-item {
+  display:flex;
+  flex-direction:column;
+}
+@media (min-width: 992px) {
+  .product-item {
+    padding: 0 15%;
+  }
+}
 
 @media (min-width: 992px) {
   .product-item .product-item-title {
@@ -11036,14 +11053,14 @@ p {
   .product-item .product-item-img {
     position: relative;
     z-index: 0;
-    max-width: 60vw;
+    max-width: 50vw;
     height: 600px;
   }
   .product-item .product-item-description {
     position: relative;
     z-index: 1;
     margin-top: -3rem;
-    max-width: 50vw;
+    max-width: 40vw;
   }
 }
 
@@ -11087,17 +11104,46 @@ p {
   color: darkgray;
 }
 .footer .rounded-circle {
-  width:40vmin;
-  height:40vmin;
+  width:35vmin;
+  height:35vmin;
   border-radius: 50% !important;
 }
 .footer .rounded-circle img{
-  width:70%;
+  width:90%;
   height:auto;
   border-radius: 50% !important;
+}
+.footer .icons{
+  font-size: 1.5rem;
 }
 
 div.logo img {
     width: 150px;
     height: 50px;
+}
+
+.highlightButton {
+  background-color: var(--bs-primary);
+  border-radius: 20%;
+  background-clip: content-box;
+
+}
+
+.gridDisplay{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.instaPost {
+  background:#FFF; 
+  border:0; 
+  border-radius:3px; 
+  box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); 
+  margin: 1px; max-width:540px; 
+  min-width:326px; 
+  padding:0; 
+  width:99.375%; 
+  width:-webkit-calc(100% - 2px); 
+  width:calc(100% - 2px);
 }

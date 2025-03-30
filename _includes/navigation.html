@@ -18,20 +18,25 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav mx-auto">
 				{% for item in site.data.navigation %}
-				<li class="nav-item px-lg-4">
-					<a href="{{ site.baseurl }}{{ item.link }}" class="nav-link" ><span class="nav-link">{{ item.name }}</span></a>
-				</li>
+					{% if item.highlight %}
+					<li class="nav-item px-lg-4 highlightButton">
+						<a href="{{ site.baseurl }}{{ item.link }}" class="nav-link" ><span class="nav-link">{{ item.name }}</span></a>	
+					</li>
+					{% else %}
+					<li class="nav-item px-lg-4">
+						<a href="{{ site.baseurl }}{{ item.link }}" class="nav-link" ><span class="nav-link">{{ item.name }}</span></a>
+					</li>
+					{% endif %}
 				{% endfor %}
 			</ul>
 		</div>
 	</div>
 </nav>
   <div>
-    <h4 class="site-heading">
-      <span class="site-heading-primary">Animal Farm Rescue Center</span>
-      <span class="site-heading-secondary text-primary mb-3">Helping animals since 2005!</span>
-     
-    </h4>
+    <H1 class="site-heading">
+      <div class="site-heading-primary">Animal Farm Rescue Center</div>
+      <div class="site-heading-secondary text-primary mb-3">Helping animals since 2005!</div>
+	</H1>
   </div>
   </nav>
 
