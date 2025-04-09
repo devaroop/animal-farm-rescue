@@ -8,16 +8,17 @@
     <meta name="generator" content="Jekyll v3.10.0" />
     <meta property="og:title" content="{{ page.title }}" />
     <meta property="og:locale" content="en_US" />
-    <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-    <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-    <link rel="canonical" href="http://localhost:4000/" />
-    <meta property="og:url" content="http://localhost:4000/" />
-    <meta property="og:site_name" content="Animal Farm Rescue Center" />
+    <meta name="description" content="{{ site.description }}" />
+    <meta property="og:description" content="{{ site.description }}" />
+    <link rel="canonical" href="{{ site.url }}" />
+    <meta property="og:url" content="{{ site.url }}" />
+    <meta property="og:site_name" content="{{ site.title }}" />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary" />
     <meta property="twitter:title" content="{{ page.title }}" />
     <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","headline":"Animal Farm Rescue Center","name":"Animal Farm Rescue Center","url":"http://localhost:4000/"}</script>
+      {"@context":"https://schema.org","@type":"WebSite","description":"{{ site.description }}","headline":"{{ site.title }}","name":"{{ site.title }}","url":"{{ site.url }}"}
+    </script>
     <!-- End Jekyll SEO tag -->
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico" />
     <!-- Google fonts-->
@@ -27,13 +28,24 @@
     <!-- Core theme CSS (includes Bootstrap)-->
     <!--link rel="stylesheet" href="assets/main.css"-->
     <link href="assets/css/styles.css" rel="stylesheet" />
-    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Animal Farm Rescue Center" />
+    <link type="application/atom+xml" rel="alternate" href="{{ site.url }}/feed.xml" title="{{ site.title }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wdth,wght@0,75,300..800;1,75,300..800&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-</head>
+  </head>
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEF2CL2NKM"></script>
+  <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
+
+   gtag('config', 'G-PEF2CL2NKM');
+  </script>
+
   <body>
     {% include navigation.html %}
 
@@ -51,7 +63,7 @@
             </div>
 
             <p class="text-center">
-	      <span class="fw-bold">Animal Farm Rescue Center</span>
+	      <span class="fw-bold">{{ site.title }}</span>
 	      <br/>
 	      Reg No: {{ site.data.address.registration_number }}
 	    </p>
@@ -131,7 +143,7 @@
       <!-- Copyright -->
       <div class="text-center p-3 copyright">
 	© 2025 Copyright:
-	<a href="{{ site.baseurl }}">Animal Farm Rescue Center</a>
+	<a href="{{ site.baseurl }}">{{ site.title }}</a>
       </div>
       <!-- Copyright -->
     </footer>
