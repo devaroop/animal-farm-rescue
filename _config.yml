@@ -22,7 +22,7 @@ title: Animal Farm Rescue Center
 email: animalfarm.pune@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A dedicated team of doctors working relentlessly for the betterment of strays in and around Pune.
-baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://animalfarmrescue.org" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
