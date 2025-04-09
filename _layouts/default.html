@@ -112,7 +112,7 @@
             <ul class="list-unstyled">
 	      {% for item in site.data.navigation %}
 	      <li class="mb-2">
-		<a class="text-white" href="{{ site.baseurl }}{{ item.link }}"><i class="fas fa-paw pe-3"></i>{{ item.name }}</a>
+		<a class="text-white" href="/{{ item.link }}"><i class="fas fa-paw pe-3"></i>{{ item.name }}</a>
 	      </li>
 	      {% endfor %}
             </ul>
@@ -143,7 +143,7 @@
       <!-- Copyright -->
       <div class="text-center p-3 copyright">
 	© 2025 Copyright:
-	<a href="{{ site.baseurl }}">{{ site.title }}</a>
+	<a href="/">{{ site.title }}</a>
       </div>
       <!-- Copyright -->
     </footer>
