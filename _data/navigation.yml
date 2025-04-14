@@ -4,12 +4,12 @@
   link: about
 - name: Activities
   link: activities
-- name: Volunteer
-  link: volunteer
 - name: Donate
   link: donate
   highlight: true
-#- name: Adopt
-#  link: adopt
+- name: Adopt
+  link: adopt
+- name: Volunteer
+  link: volunteer
 - name: Contact
   link: contact
