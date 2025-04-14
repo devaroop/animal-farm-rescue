@@ -4,36 +4,37 @@ title: Contact Us
 permalink: /contact
 ---
 
-<section class="page-section cta">
+<section class="page-section cta contact">
   <div class="container">
     <div class="row">
       <div class="col-xl-9 mx-auto">
         <div class="cta-inner bg-faded text-center rounded">
           <h2 class="section-heading mb-5">
-            <span class="section-heading-upper">Come On In</span>
-            <span class="section-heading-lower">We're Open</span>
+            <!--<span class="section-heading-upper">Come On In</span>-->
+            <span class="section-heading-upper">We're Open All Days 8 AM to 5 PM</span>
           </h2>
-          <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
+          <!--<ul class="list-unstyled list-hours mb-5 text-left mx-auto">
 	    {% for item in site.data.contact %}
             <li class="list-unstyled-item list-hours-item d-flex">
               {{ item.day }}
               <span class="ms-auto">{{ item.hours }}</span>
             </li>
 	    {% endfor %}
-          </ul>
-          <p class="address mb-5">
+          </ul>-->
+
+      <p class="address mb-5">
 	    <a href="{{ site.data.address.google_maps_link }}" target="_blank">
-              <em>
-		<strong>Animal Farm Rescue Center</strong>
+		    <strong>Google Location</strong> (Click Here)
 		<br />
-		{{ site.data.address.address }}
-              </em>
+		{{ site.data.address.addressL1 }}<br/>
+    {{ site.data.address.addressL2 }}</br/>
+    {{ site.data.address.addressL3 }}<br/>
 	    </a>
 	    <br/>
 	    <span class="fw-bold">Reg No: {{ site.data.address.registration_number }}</span>
           </p>
           <p class="mb-0">
-            <small><em>Call Anytime</em></small>
+            Call between 8 AM to 5 PM
             <br />
             {{ site.data.address.phone_number }}
 	    <br />
@@ -41,9 +42,7 @@ permalink: /contact
           </p>
 
 	  <p class="mb-0">
-            <small><em>Email Anytime</em></small>
-            <br />
-            {{ site.data.address.email }}
+           <a href="mailto:{{ site.data.address.email }}">{{ site.data.address.email }}</a> 
           </p>
 
         </div>
