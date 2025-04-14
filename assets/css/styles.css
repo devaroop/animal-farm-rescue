@@ -111,10 +111,10 @@ body {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 body a:visited{
-  text-decoration: none !important;
+  text-decoration: none ;
 }
 hr {
   margin: 1rem 0;
@@ -11171,4 +11171,16 @@ div.logo img {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.logo{
+  width : 20vmax
+}
+
+.contact{
+  
+}
+.contact a {
+  color : blue;
+  text-decoration: underline;
 }
