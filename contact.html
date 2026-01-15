@@ -1,52 +1,86 @@
 ---
 layout: default
-title: Contact Us
-permalink: /contact
+title: Contact
 ---
-
-<section class="page-section cta contact">
-  <div class="container">
-    <div class="row">
-      <div class="col-xl-9 mx-auto">
-        <div class="cta-inner bg-faded text-center rounded">
-          <h2 class="section-heading mb-5">
-            <!--<span class="section-heading-upper">Come On In</span>-->
-            <span class="section-heading-upper">We're Open All Days 8 AM to 5 PM</span>
-          </h2>
-          <!--<ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-	    {% for item in site.data.contact %}
-            <li class="list-unstyled-item list-hours-item d-flex">
-              {{ item.day }}
-              <span class="ms-auto">{{ item.hours }}</span>
-            </li>
-	    {% endfor %}
-          </ul>-->
-
-      <p class="address mb-5">
-	    <a href="{{ site.data.address.google_maps_link }}" target="_blank">
-		    <strong>Google Location</strong> (Click Here)
-		<br />
-		{{ site.data.address.addressL1 }}<br/>
-    {{ site.data.address.addressL2 }}</br/>
-    {{ site.data.address.addressL3 }}<br/>
-	    </a>
-	    <br/>
-	    <span class="fw-bold">Reg No: {{ site.data.address.registration_number }}</span>
-          </p>
-          <p class="mb-0">
-            Call between 8 AM to 5 PM
-            <br />
-            {{ site.data.address.phone_number }}
-	    <br />
-	    {{ site.data.address.phone_number_2 }}
-          </p>
-
-	  <p class="mb-0">
-           <a href="mailto:{{ site.data.address.email }}">{{ site.data.address.email }}</a> 
-          </p>
-
+<!-- Page Header Start -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="col-12">
+                <a href="{{ '/' | relative_url }}">Home</a>
+                <a href="#">Contact</a>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
-</section>
+</div>
+<!-- Page Header End -->
+
+        
+<!-- Contact Start -->
+<div class="contact">
+    <div class="container">
+        <div class="section-header text-center">
+            <p>Get In Touch</p>
+            <h2>Contact for any query</h2>
+        </div>
+        <div class="contact-img">
+            <img src="{{ '/img/contact.jpg' | relative_url }}" alt="Image">
+        </div>
+        <div class="contact-form">
+                <div id="success"></div>
+                <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                    <div class="control-group">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required="required" data-validation-required-message="Please enter your name" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <input type="email" class="form-control" id="email" placeholder="Your Email" required="required" data-validation-required-message="Please enter your email" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <input type="text" class="form-control" id="subject" placeholder="Subject" required="required" data-validation-required-message="Please enter a subject" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div class="control-group">
+                        <textarea class="form-control" id="message" placeholder="Message" required="required" data-validation-required-message="Please enter your message"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                    <div>
+                        <button class="btn btn-custom" type="submit" id="sendMessageButton">Send Message</button>
+                    </div>
+                </form>
+            </div>
+    </div>
+</div>
+<!-- Contact End -->
+
+
+
+        <!-- Back to top button -->
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+        <!-- Pre Loader -->
+        <div id="loader" class="show">
+            <div class="loader"></div>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/counterup/counterup.min.js"></script>
+        <script src="lib/parallax/parallax.min.js"></script>
+        
+        <!-- Contact Javascript File -->
+        <script src="mail/jqBootstrapValidation.min.js"></script>
+        <script src="mail/contact.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
